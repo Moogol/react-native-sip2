@@ -211,7 +211,7 @@ export default class Endpoint extends EventEmitter {
      * @param {Account} account
      * @returns {Promise}
      */
-  deleteAccount (account) {
+  deleteAccount = (account) => {
     return new Promise(function (resolve, reject) {
       NativeModules.PjSipModule.deleteAccount(account.getId(), (successful, data) => {
         if (successful) {

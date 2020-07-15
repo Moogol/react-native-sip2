@@ -8,3 +8,5 @@ ios/VialerPJSIP.framework/
 ios/Pods/
 .libs.lock
 .libs.tar.gz
+yarn.lock
+package-lock.json
