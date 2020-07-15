@@ -605,21 +605,6 @@ export default class Endpoint extends EventEmitter {
   }
 
   /**
-     * @fires Endpoint#connectivity_changed
-     * @private
-     * @param data {Object}
-     */
-  _onConnectivityChanged (data) {
-    /**
-         * Fires when registration status has changed.
-         *
-         * @event Endpoint#connectivity_changed
-         * @property {Account} account
-         */
-    this.emit('connectivity_changed', new Account(data))
-  }
-
-  /**
      * @fires Endpoint#registration_changed
      * @private
      * @param data {Object}
@@ -716,9 +701,9 @@ export default class Endpoint extends EventEmitter {
      */
   _onConnectivityChanged (available) {
     /**
-         * @event Endpoint#connectivity_changed
-         * @property bool available True if connectivity matches current Network settings, otherwise false.
-         */
+     * @event Endpoint#connectivity_changed
+     * @property bool available True if connectivity matches current Network settings, otherwise false.
+     */
     this.emit('connectivity_changed', available)
   }
 
